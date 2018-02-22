@@ -1,0 +1,33 @@
+<div class="container">
+
+
+    <h1 class="text-center"> Geocoder</h1>
+    <div class="row">
+
+
+        <div class="container">
+            Please enter the address you wish to find the latitude and longitude for: <br/>
+            <form #form="ngForm" (ngSubmit)="handleSubmit(form)">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input #address ngModel type="text" name="address" class="form-control">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-info">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div >
+
+                <p class="lead"> Address: {{address.value}} </p>
+                <p>Latitude: {{ lat }} </p>
+                <p>Longitude: {{ lng }} </p>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+</div>
